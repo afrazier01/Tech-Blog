@@ -1,0 +1,16 @@
+[
+  {
+    "title": "My first post!!",
+    "content": "This is my first full-stack application :)",
+    "comment": "NICE!"
+  },
+  {
+    "title": "Why MVC is so important",
+    "content": "MVC allows developers to maintain a true separation of concerns, devising their code between the Model layer for data, the View layer for design, and the Controller layer for the application logic.",
+    "comment": "This is very insightful :o"
+  },
+  {
+    "title": "Post something!",
+    "content": "You can add content by logging in."
+  }
+]
