@@ -17,6 +17,44 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.put('/:id', async (req, res) => {
+  try {
+    const updatedUser = await User.update(
+    {
+      username: req.body.username,
+      password: req.body.password,
+    },
+    {
+      where: {
+        id: req.params.id,
+      },
+    })
+    res.json(updatedUser);
+  } catch (error) {
+    console.log(error);
+    res.json(error);
+  }
+});
+
+router.delete('/:id', async (req, res) => {
+  try {
+    const userData = await User.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    if (!userData) {
+      res.status(404).json({ message: 'No user found with this id!' });
+      return;
+    }
+
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { username: req.body.username } });
