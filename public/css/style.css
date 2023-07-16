@@ -1,0 +1,9 @@
+/* display-flex justify-space-between align-center p-2 */
+
+#header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
