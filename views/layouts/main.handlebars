@@ -11,9 +11,11 @@
 <body>
     <header id="header">
         <h1>Tae's Tech Blog 💻</h1>
-        <nav>
+        <nav id="links">
             {{#if logged_in}}
-            <button class="no-button" id="logout">logout</button>
+            <a id="logout" href="/logout">logout</a>
+            <a id="homepage">homepage</a>
+            <a id="dashboard">dashboard</a>
             {{else}}
             <a href="/login">login</a>
             {{/if}}
@@ -28,6 +30,7 @@
 
   {{#if logged_in}}
   <script src="js/logout.js"></script>
+  <script src="js/post.js"></script>
   {{/if}}
 </body>
 

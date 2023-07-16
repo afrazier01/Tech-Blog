@@ -10,9 +10,12 @@ router.get('/',withAuth , async (req,res) => {
                 attributes: {exclude: ['password']}
             }]
         });
+        
+        const posts = postData.map((post)=>post.get({plain: true }))
+        console.log(posts)
 
-      res.render('homepage',{
-        postData,
+        res.render('homepage',{
+        posts,
         logged_in: req.session.logged_in,
       })
     } catch (error) {

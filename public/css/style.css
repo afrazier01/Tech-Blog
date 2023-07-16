@@ -1,9 +1,40 @@
-/* display-flex justify-space-between align-center p-2 */
+* {
+    background-color: rgb(87, 10, 10);
+    color: gold;
+}
 
 #header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-content: center;
+    background-color:  gold;
+    color: rgb(87, 10, 10);
+    width: 100%;
+}
+
+#links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+header * {
+    background-color:  gold;
+    color: rgb(87, 10, 10);
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.post {
+    margin: 16px;
+}
+
+.post * {
+    margin: 0;
 }

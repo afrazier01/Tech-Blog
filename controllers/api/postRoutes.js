@@ -16,7 +16,6 @@ router.put('/:id', async (req, res) => {
     {
       title: req.body.title,
       content: req.body.content,
-      date_created: req.body.date_created,
       comment: req.body.comment,
     },
     {
